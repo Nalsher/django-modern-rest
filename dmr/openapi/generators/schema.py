@@ -43,7 +43,7 @@ class SchemaGenerator:
         serializer: type['BaseSerializer'],
         *,
         used_for_response: bool = False,
-        skip_registration: Literal[False] = False,
+        skip_registration: bool = False,
     ) -> Schema | Reference: ...
 
     def __call__(
