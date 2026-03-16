@@ -1,5 +1,12 @@
 import dataclasses
-from typing import TYPE_CHECKING, Any, Literal, get_args, get_origin, overload
+from typing import (
+    TYPE_CHECKING,
+    Any,
+    Literal,
+    get_args,
+    get_origin,
+    overload,
+)
 
 from dmr.exceptions import UnsolvableAnnotationsError
 from dmr.openapi.mappers.example import generate_example
@@ -36,16 +43,7 @@ class SchemaGenerator:
         serializer: type['BaseSerializer'],
         *,
         used_for_response: bool = False,
-        skip_registration: Literal[False],
-    ) -> Schema | Reference: ...
-
-    @overload
-    def __call__(
-        self,
-        annotation: Any,
-        serializer: type['BaseSerializer'],
-        *,
-        used_for_response: bool = False,
+        skip_registration: Literal[False] = False,
     ) -> Schema | Reference: ...
 
     def __call__(

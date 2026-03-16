@@ -39,7 +39,6 @@ We follow [Semantic Versions](https://semver.org/).
 ### Misc
 
 - Improved components and auth docs
-- Apply overload to SchemaGenerator.call depend on skip_generation param
 
 ## Version 0.1.0 (2026-03-13)
 
