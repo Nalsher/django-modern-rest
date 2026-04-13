@@ -28,7 +28,7 @@ def test_dmr_rf(dmr_rf: DMRRequestFactory, faker: Faker) -> None:
     email = faker.email()
 
     request = dmr_rf.post('/whatever/', data={'email': email})
-    assert request.body == b'{"email": "%s"}' % email.encode('utf8')
+    assert request.body == b'{"email":"%s"}' % email.encode('utf8')
 
     response = _MyController.as_view()(request)
 
