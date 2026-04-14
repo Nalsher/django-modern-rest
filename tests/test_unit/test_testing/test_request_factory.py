@@ -49,7 +49,7 @@ def test_dmr_async_rf_to_sync(
     email = faker.email()
 
     request = dmr_async_rf.post('/whatever/', data={'email': email})
-    assert request.body == b'{"email": "%s"}' % email.encode('utf8')
+    assert request.body == b'{"email":"%s"}' % email.encode('utf8')
 
     response = _MyController.as_view()(request)
 
@@ -78,7 +78,7 @@ async def test_dmr_async_rf_to_async(
     email = faker.email()
 
     request = dmr_async_rf.post('/whatever/', data={'email': email})
-    assert request.body == b'{"email": "%s"}' % email.encode('utf8')
+    assert request.body == b'{"email":"%s"}' % email.encode('utf8')
 
     response = await dmr_async_rf.wrap(_MyAsyncController.as_view()(request))
 
