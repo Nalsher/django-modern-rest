@@ -82,7 +82,6 @@ ignore_imports =
   dmr.openapi.views.yaml -> yaml
   # Optional json support from msgspec:
   dmr.settings -> msgspec
-  dmr.openapi.dump -> msgspec
   dmr.internal.json -> msgspec
 
 [importlinter:contract:plugins-independence]
